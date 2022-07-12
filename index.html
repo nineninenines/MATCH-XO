@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Match XX</title>
+</head>
+<body>
+    <!-- Screens -->
+    <div class="full" id="start">
+        <h1 class="title-header" id="mth">MATCH XX</h1>
+        <p class="screen-details" id="ssd">Please Press S</p>
+    </div>
+    
+    <div class="full" id="turns">
+        <h1 id="turn-info">Player's Turn!</h1>
+        <p id="turn-score">Please pass over to <strong>Player</strong></p>
+    </div>
+    <div class="full" id="end">
+        <h1 class="title-header">GAME OVER!</h1>
+        <h2 id="winner">Player Wins!</h2>
+        <p id="winner-score">Winning score of 10</p>
+    </div>
+    <div class="full-names" id="names">
+        <h1>Enter Player Names</h1>
+        <form>
+            <label for="p1name">Player 1</label><br>
+            <input type="text" id="p1name" name="p1name" placeholder="Enter name"><br>
+            <label for="p2name">Player 2</label><br>
+            <input type="text" id="p2name" name="p2name" placeholder="Enter name"><br><br>
+            <input type="submit" id="named" value="Submit">
+        </form> 
+    </div>
+    <div class="full-settings" id="settings">
+        <h1>General Settings</h1>
+        <div class="setting-list">
+            <ul>
+                <li id="display-ss">Display</li>
+                <li id="timer-ss">Timer</li>
+                <li id="player-ss">Player Details</li>
+                <li id="reset">Reset Game</li>
+            </ul>
+        </div>
+        <div class="settings" id="display-is">
+            <h1>Display Settings </h1>
+            <p class="side-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia explicabo nisi placeat quos doloribus vitae ut, pariatur, officiis ducimus assumenda consectetur aliquam voluptatum qui? Provident explicabo nobis ratione magni aut!
+                Sequi vitae debitis hic doloribus commodi! Enim mollitia optio non perspiciatis aut sit ratione excepturi ut officia repudiandae itaque provident, doloremque cupiditate, ipsam facere ipsa impedit? Possimus quaerat quo deleniti!
+                Culpa assumenda ex, rem omnis in nemo iste voluptates. Dolorem sunt, officiis quis temporibus rerum eligendi rem possimus, corrupti dolores minima numquam et natus illum esse quo atque, dolorum voluptates!
+                Nostrum impedit nam ullam repudiandae doloribus deserunt deleniti exercitationem mollitia. Veniam, nesciunt. Id corrupti doloremque deleniti accusamus atque error culpa, dolores porro eos necessitatibus, commodi, voluptatibus excepturi iusto vitae eaque!
+                Sequi, voluptatum, dolorum ex ipsa repellat eaque illum ad tempore officiis quaerat perspiciatis! Fugit vero accusantium beatae non reiciendis illo fuga! Delectus rem dolorum ea rerum deserunt numquam soluta officiis!
+                Culpa assumenda eum sint corrupti! Pariatur animi architecto, rem non harum nostrum aliquam, modi quibusdam, nobis esse magni eos tenetur excepturi molestiae eveniet maxime ex nulla quis numquam. Tenetur, excepturi.
+                Soluta pariatur repellat sequi necessitatibus in modi nobis labore inventore accusamus magni odit ex repellendus quis impedit ipsa repudiandae corrupti, iste voluptas eaque delectus. Suscipit exercitationem placeat distinctio repellat quia.
+            </p>
+        </div>
+        <div class="settings" id="timer-is"></div>
+        <div class="settings" id="player-is"></div>
+        <div class="settings" id="reset-is"></div>
+        
+
+           
+
+    </div>
+
+    <!-- Game Details Section -->
+    <header class="head">
+        <div class="game-info">
+            <h1 id="title">MATCH XX</h1>
+            <button class="cell">Test</button>
+            <p class= "game-details-p" id="round">Round 0</p>
+        </div>
+        <div class="versus-info">
+            <div class="player" id="player1">
+                <p class= "game-details-p" id="p1score">DeAndre - 0</p>
+            </div>
+            <div class="player" id="player2">
+            <p class= "game-details-p" id="p2score">Basil - 0</p>
+            </div>
+        </div>
+    </header>
+    <!-- Game Board Render -->
+    <div class="wrapper">
+        <div id="board">
+            <button class="cell" id="cell1"></button>
+            <button class="cell" id="cell2"></button>
+            <button class="cell" id="cell3"></button>
+            <button class="cell" id="cell4"></button>
+            <button class="cell" id="cell5"></button>
+            <button class="cell" id="cell6"></button>
+            <button class="cell" id="cell7"></button>
+            <button class="cell" id="cell8"></button>
+            <button class="cell" id="cell9"></button>
+            <button class="cell" id="cell10"></button>
+            <button class="cell" id="cell11"></button>
+            <button class="cell" id="cell12"></button>
+            <button class="cell" id="cell13"></button>
+            <button class="cell" id="cell14"></button>
+            <button class="cell" id="cell15"></button>
+            <button class="cell" id="cell16"></button>
+            <button class="cell" id="cell17"></button>
+            <button class="cell" id="cell18"></button>
+            <button class="cell" id="cell19"></button>
+            <button class="cell" id="cell20"></button>
+            <button class="cell" id="cell21"></button>
+            <button class="cell" id="cell22"></button>
+            <button class="cell" id="cell23"></button>
+            <button class="cell" id="cell24"></button>
+            <button class="cell" id="cell25"></button>
+            <button class="cell" id="cell26"></button>
+            <button class="cell" id="cell27"></button>
+            <button class="cell" id="cell28"></button>
+            <button class="cell" id="cell29"></button>
+            <button class="cell" id="cell30"></button>
+            <button class="cell" id="cell31"></button>
+            <button class="cell" id="cell32"></button>
+
+        </div>
+    </div>
+    <!-- Scripts! -->
+    <script src="js/jq.js"></script>
+    <script src="js/main.js"></script>
+    
+
+
+
+</body>
+</html>
