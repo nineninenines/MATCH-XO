@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Match XO</title>
+</head>
+<body>
+    <!-- **** Screens Section **** -->
+
+    <!-- Start Screen -->
+    <div class="full" id="start">
+        <h1 class="title-header" id="mth">MATCH XX</h1>
+        <p class="screen-details" id="ssd"></p>
+        <div id = "sg" class="cell">Start</div>
+    </div>
+    <!-- Turns Screen -->
+    <div class="full" id="turns">
+        <h1 id="turn-info">Player's Turn!</h1>
+        <div id="lb"></div>
+        <p id="turn-score">Please pass over to <strong>Player</strong></p>
+    </div>
+    <!-- End Game Screen -->
+    <div class="full" id="end">
+        <h1 class="title-header">GAME OVER!</h1>
+        <div id="winner"></div>
+        <div id="winner-score"></div>
+        <input type="submit" id="rg" value="REST GAME">
+    </div>
+    <!-- Name Input Screen-->
+    <div class="full-names" id="names">
+        <h1 id="z">Enter Player Names</h1>
+        <div>
+            <!-- Player 1 Input -->
+
+            <!-- P1 Name Details -->
+            <label for="p1name">Player 1 <strong>Name</strong> </label><br>
+            <input type="text" id="p1name" name="p1name" value="Player 1"><br>
+
+            <!-- P1 Color Details -->
+            <label for="p1color">Player 1 <strong>Color</strong></label><br>
+            <select id="p1color" name="p1color">
+                <option value ="#FF6C6C">Rose</option>
+                <option value ="#FFFF97">Lemon</option>
+                <option value ="#71FFAA">Mint</option>
+                <option value ="#FF85BC">Gum</option>
+                <option value ="#A369FF">Plum</option>
+            </select>
+
+            <!-- P2 Name Details -->
+            <label for="p2name">Player 2's <strong>Name</strong></label><br>
+            <input type="text" id="p2name" name="p2name" value="Player 2"><br><br>
+
+            <!-- P2 Color Details -->
+            <select id="p2color" name="p2color">
+                <option value ="#FF6C6C">Rose</option>
+                <option value ="#FFFF97">Lemon</option>
+                <option value ="#71FFAA">Mint</option>
+                <option value ="#FF85BC">Gum</option>
+                <option selected = "true"value ="#A369FF">Plum</option>
+            </select>
+            <!-- Submit Button (stored as "named") -->
+            <div id="named"class="cell">GO</div>
+        </div>
+         
+    </div>
+    <!-- Settings Screen -->
+    <div class="full-settings" id="settings">
+        <h1>General Settings</h1>
+        <div class="setting-list">
+            <ul>
+                <li id="display-ss">Display</li>
+                <li id="timer-ss">Timer</li>
+                <li id="player-ss">Player Details</li>
+                <li id="reset">Reset Game</li>
+            </ul>
+        </div>
+        <div class="settings" id="display-is">
+            <h1>Display Settings </h1>
+            <p class="side-info"></p>
+        </div>
+        <div class="settings" id="timer-is"></div>
+        <div class="settings" id="player-is"></div>
+        <div class="settings" id="reset-is"></div>
+        
+        
+           
+
+    </div>
+    <div class="wc">
+        <video id="video" width="120%" height="120%" autoplay></video>
+    </div>
+    <!-- Game Details Section -->
+    <header class="head" id="mainhead">
+        <div class="game-info">
+            <h1 id="title">MATCH XX</h1>
+            <h2 id="rt">Timer -</h2>
+            <p class="game-details-p" id="notif"></p> 
+            <p class= "game-details-p" id="rounding">Round: 0</p>
+            <p class= "game-details-p" id="totaling">Total: 0</p>
+            <p class= "game-details-p" id="turnx">Turns taken: 0</p>
+            
+
+        </div>
+        <div class="versus-info">
+            <div class="player" id="player1">
+                <p class= "game-details-p" id="p1score">Player 1 - Score: 0 Breaks: 0</p>
+            </div>
+            <div class="player" id="player2">
+            <p class= "game-details-p" id="p2score">Player 2 - Score: 0 Breaks: 0</p>
+            </div>
+        </div>
+    </header>
+    <!-- Game Board Render -->
+    <div class="wrapper">
+        <div class="wc">
+            <video id="video" autoplay></video>
+        </div>
+
+        <!-- Side Panel 1 -->
+        <div class="plane" id="plane1">
+            <h1 id="p1pan"></h1>
+            <div id="first" class="cellc"></div>
+            <div id="first-details" class="cellc"></div>
+            <div class="cellh" id="p1h"></div>
+        </div>
+        <!-- Side Panel 2 -->
+        <div class="plane" id="plane2">
+            <h1 id="p2pan"></h1>
+            <div id="second" class="cellc"></div>
+            <div id="second-details" class="cellc"></div>
+            <div class="cellh" id="p2h"></div>
+        </div>
+        <div id="board">
+        </div>
+    </div>
+    <!-- Scripts! -->
+    <script src="js/jq.js"></script>
+    <script>
+        var output = "";
+        for(var i=1; i<=64;i++){
+            output += "<button class='cell' id='cell"+i+"''></button>";
+        };
+        $('#board').html(output);
+    </script>
+
+    <!-- <script src="js/main-modified_v1.js"></script> -->
+    <script src="js/matchxo.js"></script>
+
+
+
+</body>
+</html>
